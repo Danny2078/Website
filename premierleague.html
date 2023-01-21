@@ -17,10 +17,14 @@
 <div class="promo">
 <nav>
 
-    <a href="seriea.html">Serie A</a>
-    <a href="bundesliga.html">Bundesliga</a>
-    <a href="liga.html">Liga BBVA</a>
-    <a href="index.html">Home of Football</a>
+    <ul>
+        <li><a href="index.html">Home of Football</a></li>
+        <li><a href="liga.html">Liga</a></li>
+        <li><a href="seriea.html">Serie A</a></li>
+        <li><a href="bundesliga.html">Bundesliga</a></li>
+            
+        
+        </ul>
 
 
 
@@ -31,8 +35,17 @@
 
 
 <h1>
+    <p id="demo"> 
 
-   
+        <script>
+
+            document.getElementById("demo").style.color = "yellow";    
+
+            const d = new Date();
+            document.getElementById("demo").innerHTML = d;
+            d.getTime();
+
+        </script>
 
 
 </h1>

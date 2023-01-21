@@ -14,26 +14,98 @@
 
 
 
+
+
     <div class="promo">
         <header>
 
             <img src="Images/smallnike2.png" alt="football">
+
+
+           
+
+
+      
+
+
+
+
+            </p>
+
+    
+           
     
         </header>
+
+
+
+
+
+
+
+
+
     
         <nav>
+            
 
-          <a href="premierleague.html">Premier League</a>
-          <a href="seriea.html">Serie A</a>
-          <a href="liga.html">Liga Santander</a>
-          <a href="bundesliga.html">Bundesliga</a>
+
+    <ul>
+        <li><a href="premierleague.html">Premier League</a></li>
+        <li><a href="liga.html">Liga</a></li>
+        <li><a href="seriea.html">Serie A</a></li>
+        <li><a href="bundesliga.html">Bundesliga</a></li>
+       
+        
+        </ul>
+
+
+
+            
+
+
     
     
     
     
         </nav>
+
+        <p id="demo">  
+            
+        <script>
+
+            
+        </script>   
+
+            <form action="welcome.php" method="post">
+                Name: <input type="text" name="name"><br>
+                E-mail: <input type="text" name="email"><br>
+                <input type="submit">
+                </form>
+        
+                
+
+
     
-        <main>
+        <main>   
+
+
+
+
+
+
+
+
+    
+            <script>
+
+            document.getElementById("demo").style.color = "yellow";    
+
+            const d = new Date();
+            document.getElementById("demo").innerHTML = d;
+            d.getTime();
+
+        </script> 
             
             Welcome to the Home of Football
             <p> We provide daily information on squad news, transfer rumours.
@@ -88,11 +160,101 @@
         
         <article>
 
+
+           
+    
+
+
+
+
+
+
+
+            
+           
+
+                
+
+
+
+
+
+            </script>
+         
+
+            
+            <th> 
+
+              
+                
+
+            </th>
            
 
         </article>
+
+        
     
         <footer>
+            <video width="640" height="360" controls id="video" loop muted>
+                <source src="Images/Y2Mate.is - Can Liverpool afford Jude Bellingham Good Morning Transfers-Kvtzu4PJ6SM-720p-1658023757322.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+
+
+</form>
+
+
+
+<script>
+
+
+
+window.onload = (event) => {
+
+  const video = document.querySelector("#video");
+
+  // intersection observer for resuming video when in viewport or pausing video otherwise
+  const target = document.querySelector("#video");
+
+  const options = {
+    root: null,
+    rootMargin:"0px",
+    threshold: [0.05, 0.25, 0.5, 0.75, 1]
+  }
+
+  const callback = (entries, observer) => {
+
+    entries.forEach(entry => {
+    
+      
+      if(entry.isIntersecting){
+        
+        // when the video is quarter visible, resume video playback
+        if(entry.intersectionRatio  >= 0.25){
+          video.play();
+        }
+      }else{
+
+        // when the video is out of the viewport, pause the video
+        if(entry.intersectionRatio <= 0.05){
+          video.pause();
+        }
+        
+      }
+    });
+  }
+
+  const observer = new IntersectionObserver(callback, options);
+  observer.observe(target);
+}
+
+
+
+
+</script>
+    
+   
     
     
         </footer>
